@@ -1,4 +1,110 @@
 name: MineChatJson
-version: '1.0-SNAPSHOT'
-main: org.dxdrillbassx.mineChatJson.MineChatJson
-api-version: '1.20'
+version: 1.1.0
+main: org.dxdrillbassx.mineChatJson.Main
+api-version: 1.20
+depend: [LuckPerms]
+commands:
+  chatcolor:
+    description: Открыть меню выбора цвета чата
+    usage: /<command>
+    permission: minechatjson.chatcolor
+  togglechat:
+    description: Включить/выключать чат
+    usage: /<command>
+    permission: minechatjson.togglechat
+  help:
+    description: Показать помощь по плагину
+    usage: /<command>
+    permission: minechatjson.help
+  rename:
+    description: Изменить отображаемый ник или сбросить его (/rename remove)
+    usage: /<command> <новый_ник> | /<command> remove
+    permission: minechatjson.rename
+  chatsound:
+    description: Включить/выключать звук чата или выбрать звук
+    usage: /<command> [select]
+    permission: minechatjson.chatsound
+  emoji:
+    description: Открыть меню выбора эмодзи или предпросмотр
+    usage: /<command> [preview <название_эмодзи>]
+    permission: minechatjson.emoji
+  reload:
+    description: Перезагрузить конфигурацию плагина
+    usage: /<command>
+    permission: minechatjson.reload
+  chateffect:
+    description: Открыть меню выбора эффекта текста
+    usage: /<command>
+    permission: minechatjson.chateffect
+  joinmessage:
+    description: Выбрать или установить приветственное сообщение
+    usage: /<command> [set <сообщение> | remove]
+    permission: minechatjson.joinmessage
+permissions:
+  minechatjson.chatcolor:
+    description: Разрешает открывать меню выбора цвета чата
+    default: op
+  minechatjson.togglechat:
+    description: Разрешает включать/выключать чат
+    default: op
+  minechatjson.help:
+    description: Разрешает использовать команду /help
+    default: true
+  minechatjson.rename:
+    description: Разрешает изменять ник
+    default: op
+  minechatjson.chatsound:
+    description: Разрешает включать/выключать звук чата
+    default: true
+  minechatjson.chatsound.select:
+    description: Разрешает выбирать звук чата
+    default: op
+  minechatjson.emoji:
+    description: Разрешает использовать эмодзи
+    default: true
+  minechatjson.emoji.preview:
+    description: Разрешает предпросмотр эмодзи
+    default: true
+  minechatjson.chateffect:
+    description: Разрешает открывать меню выбора эффекта текста
+    default: op
+  minechatjson.reload:
+    description: Разрешает перезагружать конфигурацию плагина
+    default: op
+  minechatjson.joinmessage:
+    description: Разрешает выбирать приветственное сообщение
+    default: true
+  minechatjson.joinmessage.set:
+    description: Разрешает устанавливать собственное приветственное сообщение
+    default: op
+  minechatjson.color.*:
+    description: Разрешает использовать все цвета чата
+    default: op
+    children:
+      minechatjson.color.red: true
+      minechatjson.color.blue: true
+      minechatjson.color.green: true
+  minechatjson.emoji.*:
+    description: Разрешает использовать все эмодзи
+    default: op
+    children:
+      minechatjson.emoji.smile: true
+      minechatjson.emoji.heart: true
+      minechatjson.emoji.star: true
+      minechatjson.emoji.fire: true
+      minechatjson.emoji.rocket: true
+      minechatjson.emoji.crown: true
+  minechatjson.effect.*:
+    description: Разрешает использовать все эффекты текста
+    default: op
+    children:
+      minechatjson.effect.bold: true
+      minechatjson.effect.italic: true
+      minechatjson.effect.underline: true
+  minechatjson.sound.*:
+    description: Разрешает использовать все звуки чата
+    default: op
+    children:
+      minechatjson.sound.experience: true
+      minechatjson.sound.pling: true
+      minechatjson.sound.levelup: true

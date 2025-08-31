@@ -1,0 +1,159 @@
+mysql:
+  enable: false
+  host: 127.0.0.1
+  port: 3306
+  db: games
+  login: root
+  pass: ""
+chat:
+  sound:
+    enabled: true
+    type: minecraft:entity.experience_orb.pickup
+  broadcast-actions: true
+  sounds:
+    inv-name: "Выбор звука 🔊"
+    remove-item:
+      material: BARRIER
+      name: "&4Сбросить звук 🗑️"
+      position: 9
+      lore:
+        - "&7Сбрасывает звук на стандартный"
+    sitems:
+      experience:
+        name: "&aЗвук опыта"
+        material: EXPERIENCE_BOTTLE
+        sound: minecraft:entity.experience_orb.pickup
+        position: 1
+        lore:
+          - "&7Звук получения опыта"
+      pling:
+        name: "&bЗвук нотного блока"
+        material: NOTE_BLOCK
+        sound: minecraft:block.note_block.pling
+        position: 2
+        lore:
+          - "&7Звук нотного блока"
+      levelup:
+        name: "&eЗвук повышения уровня"
+        material: EMERALD
+        sound: minecraft:entity.player.levelup
+        position: 3
+        lore:
+          - "&7Звук повышения уровня"
+colors:
+  inv-name: "Выбор цвета 💬"
+  default-color: "&f"
+  remove-item:
+    material: BARRIER
+    name: "&4Сбросить цвет 🗑️"
+    position: 9
+    lore:
+      - "&7Сбрасывает цвет на стандартный"
+  choosen-item:
+    material: BLACK_STAINED_GLASS_PANE
+    lore:
+      - "&7Текущий выбранный цвет"
+  sitems:
+    red:
+      name: "&cКрасный"
+      material: RED_WOOL
+      format: "&c"
+      position: 1
+      lore:
+        - "&7Красный цвет текста"
+    blue:
+      name: "&9Синий"
+      material: BLUE_WOOL
+      format: "&9"
+      position: 2
+      lore:
+        - "&7Синий цвет текста"
+    green:
+      name: "&aЗелёный"
+      material: GREEN_WOOL
+      format: "&a"
+      position: 3
+      lore:
+        - "&7Зелёный цвет текста"
+effects:
+  inv-name: "Выбор эффекта 💬"
+  remove-item:
+    material: BARRIER
+    name: "&4Сбросить эффект 🗑️"
+    position: 9
+    lore:
+      - "&7Сбрасывает эффект на стандартный"
+  sitems:
+    bold:
+      name: "&lЖирный"
+      material: FEATHER
+      format: "&l"
+      position: 1
+      lore:
+        - "&7Жирный текст"
+    italic:
+      name: "&oКурсив"
+      material: BOOK
+      format: "&o"
+      position: 2
+      lore:
+        - "&7Курсивный текст"
+    underline:
+      name: "&nПодчёркнутый"
+      material: PAPER
+      format: "&n"
+      position: 3
+      lore:
+        - "&7Подчёркнутый текст"
+joinmessages:
+  inv-name: "Выбор приветственного сообщения 👋"
+  remove-item:
+    material: BARRIER
+    name: "&4Сбросить сообщение 🗑️"
+    position: 9
+    lore:
+      - "&7Сбрасывает на стандартное сообщение"
+  sitems:
+    hello:
+      name: "&aПривет, мир!"
+      message: "&e%player% &aприветствует всех!"
+      material: SUNFLOWER
+      position: 1
+      lore:
+        - "&7Простое приветственное сообщение"
+    epic:
+      name: "&bЭпичный вход"
+      message: "&b%player% &eврывается на сервер!"
+      material: NETHER_STAR
+      position: 2
+      lore:
+        - "&7Яркое и эпичное сообщение"
+emojis:
+  smile:
+    symbol: "😊"
+  heart:
+    symbol: "❤️"
+  star:
+    symbol: "⭐"
+  fire:
+    symbol: "🔥"
+  rocket:
+    symbol: "🚀"
+  crown:
+    symbol: "👑"
+worldchat:
+  enable: false
+  format: "%prefix%player%suffix &a✎ &f%message"
+worldList: []
+use-global-chat: false
+formats:
+  global: "&9[&cⒼ&9] %js%!marry! %js%!tag! %js%%prefix%player%suffix%js% &a✎ &f%message"
+  local: "&9[&cⓁ&9] %js%!marry! %js%!tag! %js%%prefix%player%suffix%js% &a✎ &7%message"
+chat-toggle-msg: "&cЧат отключён! 😔"
+json:
+  player:
+    text:
+      - "&e%player%"
+      - "&7Статус: %marry_format%"
+      - "&7Убийства: %kills%"
+    suggestChat: "/msg %player% "
